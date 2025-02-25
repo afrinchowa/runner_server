@@ -9,7 +9,7 @@ export const app: Application = express();
 
 //parsers
 app.use(express.json());
-app.use(cors());
+app.use(cors({origin:'*',credentials:true}));
 app.use('/api/auth', authRoute);
 app.use('/api/users', UserRoutes);
 app.use('/api/bicycles', BicycleRoutes);
